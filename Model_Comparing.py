@@ -25,6 +25,6 @@ def KNeighborsRegressor_Model(Stock_Data, Name):
     Accuracy = (Results['Trend Prediction'] == Results['Trend Actual']).mean()
     print(f'Accuracy of trend prediction: {Accuracy:.2%}')
 
-    return Results.sort_values(by='Date').reset_index(drop=True)
+    return Results.sort_values(by='Date').reset_index(drop=True), Model
 
 
